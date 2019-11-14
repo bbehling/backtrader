@@ -1,0 +1,220 @@
+2 Years Data
+
+9 Month Time Horizon
+Overall SP500 Averages
+Golden Cross Average Correct = 63%
+Death Cross Average Correct = 37%
+
+Golden Cross:
+'AAPL'
+0.9166666666666666
+Death Cross
+'AAPL'
+0.18181818181818182
+Golden Cross:
+'GOOGL'
+0.8571428571428571
+Death Cross
+'GOOGL'
+0.15384615384615385
+Golden Cross:
+'MNST'
+0.75
+Death Cross
+'MNST'
+0.5454545454545454
+Golden Cross:
+'AIG'
+0.3333333333333333
+Death Cross
+'AIG'
+0.7142857142857143
+Golden Cross:
+'XRX'
+0.6666666666666666
+Death Cross
+'XRX'
+0.5454545454545454
+Golden Cross:
+'RF'
+0.6363636363636364
+Death Cross
+'RF'
+0.5
+Golden Cross:
+'IPG'
+0.29411764705882354
+Death Cross
+'IPG'
+0.5625
+Golden Cross:
+'AMZN'
+0.8
+Death Cross
+'AMZN'
+0.3333333333333333
+Golden Cross:
+'AVP'
+0.6153846153846154
+Death Cross
+'AVP'
+0.4166666666666667
+Golden Cross:
+'WU'
+0.6
+Death Cross
+'WU'
+0.14285714285714285
+Golden Cross:
+'M'
+0.5
+Death Cross
+'M'
+0.5454545454545454
+
+
+
+5 Month Time Horizon
+Overall SP500 Averages
+Golden Cross Average Correct = 62%
+Death Cross Average Correct = 38%
+
+Golden Cross:
+'AAPL'
+0.8333333333333334
+Death Cross
+'AAPL'
+0.18181818181818182
+Golden Cross:
+'GOOGL'
+0.7857142857142857
+Death Cross
+'GOOGL'
+0.3076923076923077
+Golden Cross:
+'MNST'
+0.75
+Death Cross
+'MNST'
+0.5454545454545454
+Golden Cross:
+'AIG'
+0.3333333333333333
+Death Cross
+'AIG'
+0.6428571428571429
+Golden Cross:
+'XRX'
+0.6666666666666666
+Death Cross
+'XRX'
+0.6363636363636364
+Golden Cross:
+'RF'
+0.6363636363636364
+Death Cross
+'RF'
+0.5
+Golden Cross:
+'IPG'
+0.29411764705882354
+Death Cross
+'IPG'
+0.5625
+Golden Cross:
+'AMZN'
+0.8
+Death Cross
+'AMZN'
+0.3333333333333333
+Golden Cross:
+'AVP'
+0.6153846153846154
+Death Cross
+'AVP'
+0.4166666666666667
+Golden Cross:
+'WU'
+0.5333333333333333
+Death Cross
+'WU'
+0.35714285714285715
+Golden Cross:
+'M'
+0.3333333333333333
+Death Cross
+'M'
+0.6363636363636364 
+
+
+3 Month Time Horizon
+Overall SP500 Averages
+Golden Cross Average Correct = 60%
+Death Cross Average Correct = 39%
+
+Golden Cross:
+'AAPL'
+0.75
+Death Cross
+'AAPL'
+0.2727272727272727
+Golden Cross:
+'GOOGL'
+0.8571428571428571
+Death Cross
+'GOOGL'
+0.23076923076923078
+Golden Cross:
+'MNST'
+0.6666666666666666
+Death Cross
+'MNST'
+0.5454545454545454
+Golden Cross:
+'AIG'
+0.3333333333333333
+Death Cross
+'AIG'
+0.5714285714285714
+Golden Cross:
+'XRX'
+0.6666666666666666
+Death Cross
+'XRX'
+0.5454545454545454
+Golden Cross:
+'RF'
+0.6363636363636364
+Death Cross
+'RF'
+0.5
+Golden Cross:
+'IPG'
+0.4117647058823529
+Death Cross
+'IPG'
+0.5625
+Golden Cross:
+'AMZN'
+0.6
+Death Cross
+'AMZN'
+0.2222222222222222
+Golden Cross:
+'AVP'
+0.5384615384615384
+Death Cross
+'AVP'
+0.4166666666666667
+Golden Cross:
+'WU'
+0.4666666666666667
+Death Cross
+'WU'
+0.42857142857142855
+Golden Cross:
+'M'
+0.25
+Death Cross
+'M'
+0.5454545454545454

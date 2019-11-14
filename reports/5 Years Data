@@ -1,0 +1,249 @@
+5 Years Data
+
+9 Month Time Horizon
+Overall SP500 Averages
+Golden Cross Average Correct = 65%
+Death Cross Average Correct = 34%
+
+High Performing Stocks
+APPL
+	Golden Cross Average Percent Correct = 75%
+	Death Cross Average Percent Correct = 33%
+GOOGL
+	Golden Cross Average Percent Correct = 80%
+	Death Cross Average Percent Correct = 17%
+MNST
+	Golden Cross Average Percent Correct = 73%
+	Death Cross Average Percent Correct = 44%
+
+Poor Performing Stocks
+AIG
+	Golden Cross Average Percent Correct = 52%
+	Death Cross Average Percent Correct = 53%
+XRX
+	Golden Cross Average Percent Correct = 54%
+	Death Cross Average Percent Correct = 48%
+
+Mediocre Stocks
+RF
+	Golden Cross Average Percent Correct = 58%
+	Death Cross Average Percent Correct = 43%
+IPG
+	Golden Cross Average Percent Correct = 52%
+	Death Cross Average Percent Correct = 40%
+
+Other Stocks
+AMZN
+	Golden Cross Average Percent Correct = 83%
+	Death Cross Average Percent Correct = 18%
+SUBX (ticker does not exist in yahoo feed)
+	Golden Cross Average Percent Correct = 
+	Death Cross Average Percent Correct = 
+AVP
+	Golden Cross Average Percent Correct = 42%
+	Death Cross Average Percent Correct = 60%
+WU
+	Golden Cross Average Percent Correct = 72%
+	Death Cross Average Percent Correct = 18%
+M
+	Golden Cross Average Percent Correct = 48%
+	Death Cross Average Percent Correct = 62%
+
+
+
+5 Month Time Horizon
+Overall SP500 Averages
+Golden Cross Average Correct = 63%
+Death Cross Average Correct = 36%
+
+High Performing Stocks
+APPL
+	Golden Cross Average Percent Correct = 71%
+	Death Cross Average Percent Correct = 33%
+GOOGL
+	Golden Cross Average Percent Correct = 77%
+	Death Cross Average Percent Correct = 31%
+MNST
+	Golden Cross Average Percent Correct = 69%
+	Death Cross Average Percent Correct = 52%
+
+Poor Performing Stocks
+AIG
+	Golden Cross Average Percent Correct = 52%
+	Death Cross Average Percent Correct = 58%
+XRX
+	Golden Cross Average Percent Correct = 53%
+	Death Cross Average Percent Correct = 48%
+
+Mediocre Stocks
+RF
+	Golden Cross Average Percent Correct = 58%
+	Death Cross Average Percent Correct = 43%
+IPG
+	Golden Cross Average Percent Correct = 53%
+	Death Cross Average Percent Correct = 49%
+
+Other Stocks
+AMZN
+	Golden Cross Average Percent Correct = 78%
+	Death Cross Average Percent Correct = 32%
+SUBX (ticker does not exist in yahoo feed)
+	Golden Cross Average Percent Correct = 
+	Death Cross Average Percent Correct = 
+AVP
+	Golden Cross Average Percent Correct = 39%
+	Death Cross Average Percent Correct = 53%
+WU
+	Golden Cross Average Percent Correct = 66%
+	Death Cross Average Percent Correct = 29%
+M
+	Golden Cross Average Percent Correct = 48%
+	Death Cross Average Percent Correct = 54%
+
+
+3 Month Time Horizon
+Overall SP500 Averages
+Golden Cross Average Correct = 61%
+Death Cross Average Correct = 38%
+
+High Performing Stocks
+APPL
+	Golden Cross Average Percent Correct = 71%
+	Death Cross Average Percent Correct = 37%
+GOOGL
+	Golden Cross Average Percent Correct = 77%
+	Death Cross Average Percent Correct = 24%
+MNST
+	Golden Cross Average Percent Correct = 62%
+	Death Cross Average Percent Correct = 52%
+
+Poor Performing Stocks
+AIG
+	Golden Cross Average Percent Correct = 56%
+	Death Cross Average Percent Correct = 54%
+XRX
+	Golden Cross Average Percent Correct = 50%
+	Death Cross Average Percent Correct = 56%
+
+Mediocre Stocks
+RF
+	Golden Cross Average Percent Correct = 63%
+	Death Cross Average Percent Correct = 43%
+IPG
+	Golden Cross Average Percent Correct = 50%
+	Death Cross Average Percent Correct = 51%
+
+Other Stocks
+AMZN
+	Golden Cross Average Percent Correct = 65%
+	Death Cross Average Percent Correct = 32%
+SUBX (Ticker doens't exist in Yahoo data feed)
+	Golden Cross Average Percent Correct = 
+	Death Cross Average Percent Correct = 
+AVP
+	Golden Cross Average Percent Correct = 39%
+	Death Cross Average Percent Correct = 50%
+WU
+	Golden Cross Average Percent Correct = 59%
+	Death Cross Average Percent Correct = 39%
+M
+	Golden Cross Average Percent Correct = 44%
+	Death Cross Average Percent Correct = 42%
+
+1 Month
+Overall SP500 Averages
+Golden Cross Average Correct = 58%
+Death Cross Average Correct = 43%
+
+High Performing Stocks
+APPL
+	Golden Cross Average Percent Correct = 64%
+	Death Cross Average Percent Correct = 44%
+GOOGL
+	Golden Cross Average Percent Correct = 67%
+	Death Cross Average Percent Correct = 38%
+MNST
+	Golden Cross Average Percent Correct = 69%
+	Death Cross Average Percent Correct = 48%
+
+Poor Performing Stocks
+AIG
+	Golden Cross Average Percent Correct = 64%
+	Death Cross Average Percent Correct = 54%
+XRX
+	Golden Cross Average Percent Correct = 53%
+	Death Cross Average Percent Correct = 56%
+
+Mediocre Stocks
+RF
+	Golden Cross Average Percent Correct = 71%
+	Death Cross Average Percent Correct = 57%
+IPG
+	Golden Cross Average Percent Correct = 44%
+	Death Cross Average Percent Correct = 57%
+
+Other Stocks
+AMZN
+	Golden Cross Average Percent Correct = 48%
+	Death Cross Average Percent Correct = 41%
+SUBX
+	Golden Cross Average Percent Correct = 
+	Death Cross Average Percent Correct = 
+AVP
+	Golden Cross Average Percent Correct = 45%
+	Death Cross Average Percent Correct = 53%
+WU
+	Golden Cross Average Percent Correct = 59%
+	Death Cross Average Percent Correct = 57%
+M
+	Golden Cross Average Percent Correct = 44%
+	Death Cross Average Percent Correct = 54%
+
+1 Week (7 Days)
+Overall SP500 Averages
+Golden Cross Average Correct = 54%
+Death Cross Average Correct = 46%
+
+High Performing Stocks
+APPL
+	Golden Cross Average Percent Correct = 54%
+	Death Cross Average Percent Correct = 52%
+GOOGL
+	Golden Cross Average Percent Correct = 53%
+	Death Cross Average Percent Correct = 38%
+MNST
+	Golden Cross Average Percent Correct = 58%
+	Death Cross Average Percent Correct = 40%
+
+Poor Performing Stocks
+AIG
+	Golden Cross Average Percent Correct = 64%
+	Death Cross Average Percent Correct = 38%
+XRX
+	Golden Cross Average Percent Correct = 43%
+	Death Cross Average Percent Correct = 48%
+
+Mediocre Stocks
+RF
+	Golden Cross Average Percent Correct = 67%
+	Death Cross Average Percent Correct = 57%
+IPG
+	Golden Cross Average Percent Correct = 44%
+	Death Cross Average Percent Correct = 49%
+
+Other Stocks
+AMZN
+	Golden Cross Average Percent Correct = 61%
+	Death Cross Average Percent Correct = 55%
+SUBX
+	Golden Cross Average Percent Correct = 
+	Death Cross Average Percent Correct = 
+AVP
+	Golden Cross Average Percent Correct = 42%
+	Death Cross Average Percent Correct = 50%
+WU
+	Golden Cross Average Percent Correct = 66%
+	Death Cross Average Percent Correct = 61%
+M
+	Golden Cross Average Percent Correct = 44%
+	Death Cross Average Percent Correct = 62%
