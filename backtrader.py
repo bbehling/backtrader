@@ -21,20 +21,25 @@ def remove_bom(filename):
 class SmaCross(bt.Strategy):
     # list of parameters which are configurable for the strategy
     params = dict(
-        pfast=10,  # period for the fast moving average
-        pslow=30  # period for the slow moving average
+        pfast=50,  # period for the fast moving average
+        pslow=200  # period for the slow moving average
     )
+
+    #curdate = 0
 
     def __init__(self):
         sma1 = bt.ind.SMA(period=self.p.pfast)  # fast moving average
         sma2 = bt.ind.SMA(period=self.p.pslow)  # slow moving average
         self.crossover = bt.ind.CrossOver(sma1, sma2)  # crossover signal
+        self.curdate = 0
 
     def next(self):
         if not self.position:  # not in the market
             if self.crossover > 0:  # if fast crosses slow to the upside
                 self.buy()  # enter long
 
+                self.curdate = self.datetime.date(ago=0)
+        # close out at 9 months. compare self.position.datetime - buy datetime
         elif self.crossover < 0:  # in the market & cross to the downside
             self.close()  # close long position
 
@@ -291,27 +296,28 @@ def run_stock(name):
     #trends_golden_cross = get_trends_n_timespan_buy(df)
     trends_golden_cross = get_trends_next_sell(df)
     validate_trends(trends_golden_cross)
-    get_average_days(trends_golden_cross)
+    #get_average_days(trends_golden_cross)
 
     pp = pprint.PrettyPrinter(indent=1)
-    #print('\nGolden Cross:')pp.pprint(trends_golden_cross['average days'])
-    #pp.pprint(trends_golden_cross)
-    pp.pprint(trends_golden_cross['title'])
+    print('\nGolden Cross:')
+    #pp.pprint(trends_golden_cross['average days'])
+    pp.pprint(trends_golden_cross)
+    #pp.pprint(trends_golden_cross['title'])
     #pp.pprint(trends_golden_cross['percent correct'])
-    pp.pprint(trends_golden_cross['average days'])
+    #pp.pprint(trends_golden_cross['average days'])
 
     # get death cross trends and print results
-    #print('\nDeath Cross')
-    #trends_death_cross = get_trends_n_timespan_sell(df)
-    trends_death_cross = get_trends_next_buy(df)
+    print('\nDeath Cross')
+    trends_death_cross = get_trends_n_timespan_sell(df)
+    #trends_death_cross = get_trends_next_buy(df)
     validate_trends(trends_death_cross)
-    get_average_days(trends_death_cross)
+    #get_average_days(trends_death_cross)
 
-    #pp.pprint(trends_death_cross)
+    pp.pprint(trends_death_cross)
     #pp.pprint(trends_death_cross['title'])
     #pp.pprint(trends_death_cross['percent correct'])
-    pp.pprint(trends_death_cross['average days'])
-    #cerebro.plot()  # and plot it with a single command
+    #pp.pprint(trends_death_cross['average days'])
+    cerebro.plot()  # and plot it with a single command
     return trends_golden_cross, trends_death_cross
 
 '''
@@ -349,13 +355,14 @@ overall_days_death_cross = cumulative_days_death_cross / (stock_count - 1)
 print('SP500 Percent Correct Golden Cross: ' + str(overall_golden_cross_percent_correct) + '\n')
 print('SP500 Percent Correct Death Cross: ' + str(overall_percent_correct_death_cross) + '\n')
 
-print('SP500 Buy to Sell Average Days (Golden Cross): ' + str(overall_days_golden_cross) + '\n')
-print('SP500 Sell to Buy Average Days (Death Cross): ' + str(overall_days_death_cross) + '\n')
+#print('SP500 Buy to Sell Average Days (Golden Cross): ' + str(overall_days_golden_cross) + '\n')
+#print('SP500 Sell to Buy Average Days (Death Cross): ' + str(overall_days_death_cross) + '\n')
+
 '''
 
 # well perfoming
 run_stock('AAPL')
-
+'''
 #run_stock('GOOGL')
 run_stock('MNST')
 
@@ -371,5 +378,7 @@ run_stock('AMZN')
 run_stock('AVP')
 run_stock('WU')
 run_stock('M')
+
+'''
 
 
