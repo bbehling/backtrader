@@ -4,6 +4,7 @@
     <list default="true" id="ef0215e7-e21d-445a-a3e8-8cbbf159d2f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backtrader.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtrader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nine_month_buy_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/nine_month_buy_strategy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_file.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +33,26 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.nine_month_buy_strategy">
+  <component name="RunManager" selected="Python.golden_cross_strategy">
     <configuration name="backtrader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="backtrader2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backtrader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="golden_cross_strategy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="backtrader2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -45,9 +64,9 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backtrader.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/golden_cross_strategy.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -98,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.golden_cross_strategy" />
         <item itemvalue="Python.nine_month_buy_strategy" />
         <item itemvalue="Python.backtrader" />
         <item itemvalue="Python.stategy_signals_test" />
@@ -144,13 +164,79 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1575391987495">
+    <state width="1200" height="469" key="DebuggerActiveHint" timestamp="1575486487212">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="921" height="466" key="DebuggerActiveHint/0.23.1680.947@0.23.1680.947" timestamp="1575482407415" />
+    <state width="921" height="467" key="DebuggerActiveHint/0.23.1680.949@0.23.1680.949" timestamp="1575483872580" />
+    <state width="1200" height="469" key="DebuggerActiveHint/0.23.1680.952@0.23.1680.952" timestamp="1575486487212" />
+    <state width="1379" height="255" key="GridCell.Tab.0.bottom" timestamp="1575486583154">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="255" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1575483047664" />
+    <state width="1379" height="250" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1575483989168" />
+    <state width="1379" height="255" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1575486583154" />
+    <state width="1379" height="255" key="GridCell.Tab.0.center" timestamp="1575486583153">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="255" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1575483047664" />
+    <state width="1379" height="250" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1575483989168" />
+    <state width="1379" height="255" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1575486583153" />
+    <state width="1379" height="255" key="GridCell.Tab.0.left" timestamp="1575486583153">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="255" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1575483047663" />
+    <state width="1379" height="250" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1575483989168" />
+    <state width="1379" height="255" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1575486583153" />
+    <state width="1379" height="255" key="GridCell.Tab.0.right" timestamp="1575486583153">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="255" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1575483047664" />
+    <state width="1379" height="250" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1575483989168" />
+    <state width="1379" height="255" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1575486583153" />
+    <state width="1379" height="250" key="GridCell.Tab.1.bottom" timestamp="1575486521361">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="250" key="GridCell.Tab.1.bottom/0.23.1680.947@0.23.1680.947" timestamp="1575482423985" />
+    <state width="1379" height="250" key="GridCell.Tab.1.bottom/0.23.1680.949@0.23.1680.949" timestamp="1575483989169" />
+    <state width="1379" height="250" key="GridCell.Tab.1.bottom/0.23.1680.952@0.23.1680.952" timestamp="1575486521361" />
+    <state width="1379" height="250" key="GridCell.Tab.1.center" timestamp="1575486521361">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="250" key="GridCell.Tab.1.center/0.23.1680.947@0.23.1680.947" timestamp="1575482423984" />
+    <state width="1379" height="250" key="GridCell.Tab.1.center/0.23.1680.949@0.23.1680.949" timestamp="1575483989169" />
+    <state width="1379" height="250" key="GridCell.Tab.1.center/0.23.1680.952@0.23.1680.952" timestamp="1575486521361" />
+    <state width="1379" height="250" key="GridCell.Tab.1.left" timestamp="1575486521361">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="250" key="GridCell.Tab.1.left/0.23.1680.947@0.23.1680.947" timestamp="1575482423984" />
+    <state width="1379" height="250" key="GridCell.Tab.1.left/0.23.1680.949@0.23.1680.949" timestamp="1575483989169" />
+    <state width="1379" height="250" key="GridCell.Tab.1.left/0.23.1680.952@0.23.1680.952" timestamp="1575486521361" />
+    <state width="1379" height="250" key="GridCell.Tab.1.right" timestamp="1575486521361">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1379" height="250" key="GridCell.Tab.1.right/0.23.1680.947@0.23.1680.947" timestamp="1575482423985" />
+    <state width="1379" height="250" key="GridCell.Tab.1.right/0.23.1680.949@0.23.1680.949" timestamp="1575483989169" />
+    <state width="1379" height="250" key="GridCell.Tab.1.right/0.23.1680.952@0.23.1680.952" timestamp="1575486521361" />
+    <state x="517" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1575476858237">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
-    <state x="517" y="329" key="com.intellij.ide.util.TipDialog/0.23.1680.947@0.23.1680.947" timestamp="1575391987495" />
+    <state x="517" y="329" key="com.intellij.ide.util.TipDialog/0.23.1680.947@0.23.1680.947" timestamp="1575476858237" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backtrader.py</url>
+          <line>286</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backtrader.py</url>
+          <line>315</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -165,6 +251,7 @@
         <watch expression="days_after_buy[len(days_after_buy) - 1]['adjclose']" language="Python" />
         <watch expression="years[golden_cross[&quot;year&quot;]]" language="Python" />
         <watch expression="golden_cross[&quot;year&quot;]" language="Python" />
+        <watch expression="str(self.buy_date)" language="Python" />
       </configuration>
     </watches-manager>
   </component>

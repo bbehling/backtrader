@@ -11,6 +11,7 @@ import pprint
 from dateutil import relativedelta
 
 golden_crosses = []
+has_golden_cross = False
 
 # https://stackoverflow.com/questions/21806496/pandas-seems-to-ignore-first-column-name-when-reading-tab-delimited-data-gives
 def remove_bom(filename):
@@ -34,6 +35,7 @@ class SmaCross(bt.Strategy):
 
     def next(self):
         global golden_crosses
+        global has_golden_cross
         r = relativedelta.relativedelta(self.datetime.date(ago=0), self.buy_date)
 
         if not self.position:  # not in the market
@@ -43,6 +45,7 @@ class SmaCross(bt.Strategy):
                 self.buy_date = self.datetime.date(ago=0)
 
                 golden_crosses.append({"year": self.buy_date.year})
+                has_golden_cross = True
 
         # close out at 9 months
         elif r.months == 9:
@@ -115,7 +118,7 @@ def aggregate_golden_crosses():
             years[golden_cross["year"]] += 1
         else:
             years[golden_cross["year"]] = 1
-            test = 0
+
     return years
 
 
@@ -173,15 +176,18 @@ def run_stock(name):
     pp = pprint.PrettyPrinter(indent=1)
     print('\n9 Month buy strategy:')
 
-    #pp.pprint(trends_golden_cross)
+    pp.pprint(trends_golden_cross)
     pp.pprint(trends_golden_cross['title'])
     pp.pprint(trends_golden_cross['percent correct'])
 
+    global has_golden_cross
 
-    #cerebro.plot()  # and plot it with a single command
+    #if has_golden_cross:
+        #cerebro.plot()  # and plot it with a single command
+
     return trends_golden_cross
 
-
+'''
 sp500_stocks = get_sp500()
 stock_count = 1
 cumulative_percent_correct_golden_cross = 0.0
@@ -197,8 +203,9 @@ for ticker, cik in sp500_stocks.items():
             print('Ticker ' + '{}'.format(ticker).rstrip() + ' done. ' + 'Count: ' + str(stock_count - 1))
         else:
             break
-    except:
+    except Exception as e:
         print('Exception: ' + 'Ticker: ' + '{}'.format(ticker).rstrip() + '\n')
+        print(e)
 
 overall_golden_cross_percent_correct = cumulative_percent_correct_golden_cross / (stock_count - 1)
 
@@ -229,7 +236,7 @@ run_stock('AVP')
 run_stock('WU')
 run_stock('M')
 run_stock('SBUX')
-'''
+
 
 
 

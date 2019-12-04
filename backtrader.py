@@ -281,7 +281,7 @@ def run_stock(name):
     cerebro = bt.Cerebro()  # create a "Cerebro" engine instance
     # Create a data feed
     data = bt.feeds.YahooFinanceData(dataname=name,
-                                     fromdate=datetime(2009, 1, 1),
+                                     fromdate=datetime(1999, 1, 1),
                                      todate=datetime(2019, 12, 31))
 
     cerebro.adddata(data)  # Add the data feed
