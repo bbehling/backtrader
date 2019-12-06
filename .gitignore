@@ -1,3 +1,5 @@
 backtrader/
 vnenv/
 venv2/
+*.DS_Store
+.idea/

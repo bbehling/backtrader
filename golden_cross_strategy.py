@@ -84,12 +84,12 @@ def run_strategy(name):
     cerebro.adddata(data)  # Add the data feed
 
     cerebro.addstrategy(SmaCross)  # Add the trading strategy
-    cerebro.addwriter(bt.WriterFile, csv=True, out='test_file.csv')
+    cerebro.addwriter(bt.WriterFile, csv=True, out='bt_data.csv')
 
     cerebro.run()  # run it all
 
 
-db.strategy_logs.insert_one({'status': 'Started Run', 'date': str(datetime.today())})
+db.logs.insert_one({'status': 'Started Run', 'date': str(datetime.today())})
 
 # get all stock tickers in sp500
 sp500_stocks = get_sp500()
@@ -102,12 +102,11 @@ for ticker, cik in sp500_stocks.items():
             run_strategy('{}'.format(ticker).rstrip())
 
             stock_count += 1
-            db.logs.insert_one(
-                {'status': 'Ticker ' + '{}'.format(ticker).rstrip() + ' done. ', 'date': str(datetime.today())})
+
         else:
             break
     except Exception as e:
         db.logs.insert_one({'error': 'Exception: ' + 'Ticker: ' + '{}'.format(ticker).rstrip() + ' ' + str(e),
                                      'date': str(datetime.today())})
 
-db.strategy_logs.insert_one({'status': 'Completed Run', 'date': str(datetime.today())})
+db.logs.insert_one({'status': 'Completed Run', 'date': str(datetime.today())})
