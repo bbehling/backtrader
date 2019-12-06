@@ -5,9 +5,12 @@ from bs4 import BeautifulSoup
 import requests
 import backtrader as bt
 from dateutil import relativedelta
+import pymongo
 
 golden_crosses = []
-today_date = datetime.today().strftime('%Y-%m-%d')
+today_date = datetime.today()
+client = pymongo.MongoClient("3.135.248.216", 27017)
+db = client.strategies
 
 
 class SmaCross(bt.Strategy):
@@ -25,6 +28,8 @@ class SmaCross(bt.Strategy):
 
     def next(self):
         global golden_crosses
+        global db
+
         r = relativedelta.relativedelta(self.datetime.date(ago=0), self.buy_date)
 
         if not self.position:  # not in the market
@@ -33,9 +38,13 @@ class SmaCross(bt.Strategy):
                 self.buy()  # enter long
 
                 self.buy_date = self.datetime.date(ago=0)
+                r = relativedelta.relativedelta(today_date, self.datetime.date(ago=0))
 
-                if str(self.buy_date) == today_date:
-                    golden_crosses.append({"buyDate": str(self.buy_date), 'ticker': next(iter(self.positionsbyname))})
+                # if golden cross has happened within 2 days, record it
+                # TODO - if backtrader can get golden cross the same day, then change conditional to equal today's date
+                if r.years == 0 and r.months == 0 and r.days <= 2:
+                    db.golden_crosses.insert_one(
+                        {'ticker': next(iter(self.positionsbyname)), "buyDate": str(self.buy_date)})
 
         # close out at 9 months
         elif r.months == 9:
@@ -65,7 +74,7 @@ def get_sp500():
     return company_dict
 
 
-def run_stock(name):
+def run_strategy(name):
     cerebro = bt.Cerebro()  # create a "Cerebro" engine instance
     # Create a data feed
     data = bt.feeds.YahooFinanceData(dataname=name,
@@ -80,19 +89,25 @@ def run_stock(name):
     cerebro.run()  # run it all
 
 
+db.strategy_logs.insert_one({'status': 'Started Run', 'date': str(datetime.today())})
+
+# get all stock tickers in sp500
 sp500_stocks = get_sp500()
 stock_count = 1
 
+# for all tickers, run strategy
 for ticker, cik in sp500_stocks.items():
     try:
-        if stock_count < 10:
-            run_stock('{}'.format(ticker).rstrip())
+        if stock_count < 600:  # for debugger purposes
+            run_strategy('{}'.format(ticker).rstrip())
 
             stock_count += 1
-
-            print('Ticker ' + '{}'.format(ticker).rstrip() + ' done. ' + 'Count: ' + str(stock_count - 1))
+            db.logs.insert_one(
+                {'status': 'Ticker ' + '{}'.format(ticker).rstrip() + ' done. ', 'date': str(datetime.today())})
         else:
             break
     except Exception as e:
-        print('Exception: ' + 'Ticker: ' + '{}'.format(ticker).rstrip() + '\n')
-        print(e)
+        db.logs.insert_one({'error': 'Exception: ' + 'Ticker: ' + '{}'.format(ticker).rstrip() + ' ' + str(e),
+                                     'date': str(datetime.today())})
+
+db.strategy_logs.insert_one({'status': 'Completed Run', 'date': str(datetime.today())})
