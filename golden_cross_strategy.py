@@ -6,12 +6,12 @@ import requests
 import backtrader as bt
 from dateutil import relativedelta
 import pymongo
+import report_generator
 
-golden_crosses = []
 today_date = datetime.today()
-client = pymongo.MongoClient("3.135.248.216", 27017)
+client = pymongo.MongoClient("3.133.104.192", 27017)
 db = client.strategies
-
+golden_crosses = []
 
 class SmaCross(bt.Strategy):
     # list of parameters which are configurable for the strategy
@@ -40,12 +40,15 @@ class SmaCross(bt.Strategy):
                 self.buy_date = self.datetime.date(ago=0)
                 r = relativedelta.relativedelta(today_date, self.datetime.date(ago=0))
 
-                # if golden cross has happened within 2 days, record it
                 # TODO - if backtrader can get golden cross the same day, then change conditional to equal today's date
-                if r.years == 0 and r.months == 0 and r.days <= 2:
-                    db.golden_crosses.insert_one(
-                        {'ticker': next(iter(self.positionsbyname)), "buyDate": str(self.buy_date)})
 
+                # if golden cross has happened within 1 day
+                if r.years == 0 and r.months == 0 and r.days <= 1:
+                    golden_crosses.append({'ticker': next(iter(self.positionsbyname)), "buyDate": str(self.buy_date)})
+                    db.golden_crosses.insert_one(
+                        {'ticker': next(iter(self.positionsbyname)), "buyDate": self.data.datetime.datetime()})
+
+        # TODO - we probably don't need this. Take out
         # close out at 9 months
         elif r.months == 9:
             self.close()  # close long position
@@ -108,5 +111,7 @@ for ticker, cik in sp500_stocks.items():
     except Exception as e:
         db.logs.insert_one({'error': 'Exception: ' + 'Ticker: ' + '{}'.format(ticker).rstrip() + ' ' + str(e),
                                      'date': str(datetime.today())})
+
+#report_generator.sendReport(golden_crosses)
 
 db.logs.insert_one({'status': 'Completed Run', 'date': str(datetime.today())})
